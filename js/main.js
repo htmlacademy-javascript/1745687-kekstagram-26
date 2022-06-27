@@ -1,18 +1,18 @@
 function getIntRandomNumber(min, max) {
-    let absMin = Math.abs(min);
-    let absMax = Math.abs(max);
+  let absMin = Math.abs(min);
+  let absMax = Math.abs(max);
   
-    if (absMin > absMax) {
-      [absMax, absMin] = [absMin, absMax];
-    }
-  
-    return Math.floor(Math.random() * (absMax - absMin +  1)) + absMin;
+  if (absMin > absMax) {
+    [absMax, absMin] = [absMin, absMax];
   }
   
-  function checkStringLength(string, maxLength) {
-    return string.length <= maxLength;
-  }
+  return Math.floor(Math.random() * (absMax - absMin +  1)) + absMin;
+}
   
-  checkStringLength('строка', 4);
+function checkStringLength(string, maxLength) {
+  return string.length <= maxLength;
+}
   
-  getIntRandomNumber(-12,33);
+checkStringLength('строка', 4);
+  
+getIntRandomNumber(-12,33);
