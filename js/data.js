@@ -32,7 +32,6 @@ const SIMILAR_NAMES = [
 ];
 
 const PHOTO_ARRAY = Array.from({ length: SIMILAR_PHOTO_COUNT }, (_item, index) => index + 1);
-
 const getPhoto = getRandomUniqElement(PHOTO_ARRAY);
 
 const createComment = (id) => ({
