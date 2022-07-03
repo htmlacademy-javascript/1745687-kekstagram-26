@@ -49,6 +49,4 @@ const createPost = (id) => ({
   comments: Array.from({length: getIntRandomNumber(1, MAX_PHOTO_COMMENTS)}, (_item, index) =>  createComment(index))
 });
 
-const createSmilarPosts = (POST_COUNT) => Array.from({length: POST_COUNT}, (_item, index) => createPost(index));
-
-export {createSmilarPosts};
+export {createPost};

@@ -3,8 +3,8 @@ function getIntRandomNumber(firstNumber, secondNumber) {
     throw new Error(`positive number expected ${[secondNumber, firstNumber]}`);
   }
 
-  if (firstNumber >= secondNumber) {
-    throw new Error(`first argument must be greater than second ${[secondNumber, firstNumber]}`);
+  if (firstNumber > secondNumber) {
+    throw new Error(`first argument must be lesser than second ${[secondNumber, firstNumber]}`);
   }
 
   return Math.floor(Math.random() * (secondNumber - firstNumber +  1)) + firstNumber;
