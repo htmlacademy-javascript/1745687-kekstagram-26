@@ -1,13 +1,13 @@
-function getIntRandomNumber(FirstNumber, SecondNumber) {
-  if(FirstNumber < 0 || SecondNumber < 0){
-    throw new Error(`positive number expected ${[SecondNumber, FirstNumber]}`);
+function getIntRandomNumber(firstNumber, secondNumber) {
+  if(firstNumber < 0 || secondNumber < 0){
+    throw new Error(`positive number expected ${[secondNumber, firstNumber]}`);
   }
 
-  if (FirstNumber > SecondNumber) {
-    [SecondNumber, FirstNumber] = [FirstNumber, SecondNumber];
+  if (firstNumber >= secondNumber) {
+    throw new Error(`first argument must be greater than second ${[secondNumber, firstNumber]}`);
   }
 
-  return Math.floor(Math.random() * (SecondNumber - FirstNumber +  1)) + FirstNumber;
+  return Math.floor(Math.random() * (secondNumber - firstNumber +  1)) + firstNumber;
 }
 
 function checkStringLength(string, maxLength) {
