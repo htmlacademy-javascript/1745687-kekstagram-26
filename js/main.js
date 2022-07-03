@@ -34,15 +34,17 @@ const PHOTO_ARRAY = Array.from({ length: SIMILAR_PHOTO_COUNT }, (_item, index) =
 
 const getPhoto = getRandomUniqElement(PHOTO_ARRAY);
 
-function getIntRandomNumber(min, max) {
-  let absMin = Math.abs(min);
-  let absMax = Math.abs(max);
+function getIntRandomNumber(FirstNumber, SecondNumber) {
 
-  if (absMin > absMax) {
-    [absMax, absMin] = [absMin, absMax];
+  if(FirstNumber < 0 || SecondNumber < 0){
+    throw new Error(`positive number expected ${[SecondNumber, FirstNumber]}`);
   }
 
-  return Math.floor(Math.random() * (absMax - absMin +  1)) + absMin;
+  if (FirstNumber > SecondNumber) {
+    [SecondNumber, FirstNumber] = [FirstNumber, SecondNumber];
+  }
+
+  return Math.floor(Math.random() * (SecondNumber - FirstNumber +  1)) + FirstNumber;
 }
 
 function checkStringLength(string, maxLength) {
@@ -86,4 +88,4 @@ const createPost = (id) => ({
 
 const createSmilarPosts = () => Array.from({length: SIMILAR_POST_COUNT}, (_item, index) => createPost(index));
 
-console.log(createSmilarPosts());
+Window.console.log(createSmilarPosts());
