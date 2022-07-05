@@ -32,7 +32,6 @@ const SIMILAR_NAMES = [
 ];
 
 const PHOTO_ARRAY = Array.from({ length: SIMILAR_PHOTO_COUNT }, (_item, index) => index + 1);
-
 const getPhoto = getRandomUniqElement(PHOTO_ARRAY);
 
 const createComment = (id) => ({
@@ -50,6 +49,4 @@ const createPost = (id) => ({
   comments: Array.from({length: getIntRandomNumber(1, MAX_PHOTO_COMMENTS)}, (_item, index) =>  createComment(index))
 });
 
-const createSmilarPosts = (POST_COUNT) => Array.from({length: POST_COUNT}, (_item, index) => createPost(index));
-
-export {createSmilarPosts};
+export {createPost};
