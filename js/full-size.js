@@ -1,4 +1,4 @@
-/* import {makeElement} from './utils.js';
+import {makeElement} from './utils.js';
 import {ifEscEvent} from './utils.js';
 
 const fullsize = document.querySelector('.big-picture');
@@ -70,4 +70,3 @@ fullsizeCancelBtn.addEventListener('click', () => {
 
 
 export {fullsize, fullsizeCancelBtn, renderFullsize, closeFullsize, openFullsize};
- */
