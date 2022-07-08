@@ -30,4 +30,18 @@ function getRandomUniqElement(array) {
   };
 }
 
-export {getIntRandomNumber, checkStringLength, getRandomArrayElement, getRandomUniqElement};
+
+const makeElement = (tagName, className, text) => {
+  const element = document.createElement(tagName);
+  element.classList.add(className);
+
+  if (text) {
+    element.textContent = text;
+  }
+
+  return element;
+};
+
+const ifEscEvent = (evt) => evt.keyCode === 27;
+
+export {getIntRandomNumber, checkStringLength, getRandomArrayElement, getRandomUniqElement, makeElement, ifEscEvent};
